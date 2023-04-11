@@ -1,0 +1,43 @@
+{
+  "name": "@naokiy/openjtalk-wrapper",
+  "version": "0.1.0",
+  "description": "Wrapper of OpenJTalk",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "module": "./module/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./module/index.d.ts",
+        "default": "./module/index.js"
+      },
+      "require": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.js"
+      },
+      "default": "./lib/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json && tsconfig-to-dual-package",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "naokiy",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.7",
+    "prettier-plugin-md-nocjsp": "^1.5.1",
+    "tsconfig-to-dual-package": "^1.1.1",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "@esm2cjs/execa": "^6.1.1-cjs.1",
+    "save-dev": "^0.0.1-security"
+  }
+}
