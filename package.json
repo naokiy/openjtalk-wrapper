@@ -21,7 +21,8 @@
   },
   "scripts": {
     "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json && tsconfig-to-dual-package",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "author": "naokiy",
   "license": "MIT",
@@ -31,8 +32,10 @@
     "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.0",
     "prettier": "^2.8.7",
     "prettier-plugin-md-nocjsp": "^1.5.1",
+    "pretty-quick": "^3.1.3",
     "tsconfig-to-dual-package": "^1.1.1",
     "typescript": "^5.0.3"
   },
